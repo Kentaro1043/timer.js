@@ -1,0 +1,17 @@
+body{
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+}
+
+header{
+    background-color: #171717;
+}
+
+.box{
+    width: 100%;
+    height: 95vh;
+}
+
+#hour{
+    width: 90px;
+}
