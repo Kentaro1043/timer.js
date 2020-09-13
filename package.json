@@ -1,0 +1,24 @@
+{
+  "name": "timerjsexe",
+  "version": "1.0.0",
+  "description": "timer by JavaScript",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron .",
+    "pack" : "electron-builder --dir" ,
+    "dist" : "electron-builder"
+  },
+  "author": "Kentaro",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.1",
+    "electron-builder": "^22.8.0"
+  },
+  "build" : {
+    "appId" : "com.electron.timerjsexe" ,
+    "win" : {
+     "target" : "portable",
+     "icon" : "favicon.ico"
+    }
+  }
+}
