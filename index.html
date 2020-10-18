@@ -10,20 +10,31 @@
         <link rel="icon" href="favicon.ico">
     </head>
     <body>
-        <header class="text-center bg-secondary text-white">
-            タイマー
-        </header>
+       <nav class="navbar navbar-expend-lg navbar-dark bg-secondary">
+         <a href="#" class="navbar-brand">timer.js</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedCotent" aria-expended="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                      <a href="../top" class="nav-link">ホーム</a>
+                  </li>
+              </ul>
+          </div>
+       </nav>
         <div class="d-flex justify-content-center align-items-center text-white bg-dark box">
             <div>
                 <p id="startToHide">
-                    <input type="number" min="0" id="hour" value="0">
+                    <input type="number" max="23" min="0" id="hour" value="0">
                     時間
                     <input type="number" max="59" min="0" id="minute" value="0">
                     分
                     <input type="number" max="59" min="0" id="second" value="1">
                     秒
                 </p>
-                    <div class="text-center" id="timeRemaining"></div>
+                  <p class="text-center font-weight-bold" id="timeRemaining"></p>
                 <p class="text-center">
                     <button onclick="finish()" type="button" class="btn btn-secondary rounded-pill" id="finishButton" disabled>キャンセル</button>
                     <button onclick="start()" type="button" class="btn btn-success rounded-pill" id="startButton">開始</button>
