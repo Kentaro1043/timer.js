@@ -13,8 +13,13 @@ header{
 }
 
 #hour{
-    width: 90px;
+    width: 75px;
 }
 
+#minute{
+    width: 75px;
+}
 
-
+#second{
+    width: 75px;
+}
