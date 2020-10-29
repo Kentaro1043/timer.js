@@ -11,6 +11,15 @@ let times;
 let timeIntId;
 
 function start(){
+    hour = parseInt(document.getElementById('hour').value,10);
+    minute = parseInt(document.getElementById('minute').value,10);
+    second = parseInt(document.getElementById('second').value,10);
+    nowTime = hour * 3600 + minute * 60 + second;
+    if(hour <= 0 && minute <= 0 && second <= 0){
+        $('#divHide').attr('id','divAble');
+        return 0;
+       }
+    $('#divAble').attr('id', 'divHide')
     startToHide.hidden = true;
     finishButton.disabled = false;
     startButton.className = "btn btn-warning rounded-pill";
@@ -18,10 +27,7 @@ function start(){
     startButton.onclick = "";
     startButton.removeEventListener("click",start);
     startButton.addEventListener("click",stop);
-    hour = parseInt(document.getElementById('hour').value,10);
-    minute = parseInt(document.getElementById('minute').value,10);
-    second = parseInt(document.getElementById('second').value,10);
-    nowTime = hour * 3600 + minute * 60 + second;
+
     if(nowTime / 3600 > 1){
         remain.innerHTML = ('00' + Math.floor(nowTime / 3600)).slice(-2) + ":" + ('00' + Math.floor(nowTime % 3600 / 60)).slice(-2)+ ":" + ('00' + Math.floor(nowTime % 3600 % 60)).slice(-2);
     }else if(nowTime / 3600 <= 1){

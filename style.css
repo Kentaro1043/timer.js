@@ -23,3 +23,11 @@ header{
 #second{
     width: 75px;
 }
+
+#divHide{
+    visibility: hidden;
+}
+
+#divAble{
+    visibility: visible;
+}
