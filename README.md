@@ -1,2 +1,2 @@
 # timer.js
-This is simple timer on browzer.
+ブラウザで動くタイマーです。ご自由にお使いください。てかこんなんだれも使わ(ry
