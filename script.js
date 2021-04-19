@@ -10,6 +10,12 @@ let nowTime;
 let times;
 let timeIntId;
 
+var sound = new Audio('IMSLP246987-PMLP02533-Peer_Gynt_Suite_No._1,_Op._46_-_I._Morning.mp3');
+sound.addEventListener("ended",function(){
+    sound.currentTime = 0;
+    sound.play();
+}, false);
+
 function start(){
     hour = parseInt(document.getElementById('hour').value,10);
     minute = parseInt(document.getElementById('minute').value,10);
@@ -86,6 +92,9 @@ function nextTime(){
         startButton.removeEventListener("click",stop);
         startButton.addEventListener("click",start);
         finishButton.disabled = true;
+        sound.currentTime = 0;
+        sound.play();
         alert("終了しました");
+        sound.pause();
     }
 }
